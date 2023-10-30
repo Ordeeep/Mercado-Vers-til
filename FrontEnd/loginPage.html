@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/styleLogin.css">
+    <title>Mercado Versátil - Login</title>
+</head>
+<body>
+    <main id="loginContainer">
+            <h1>Login</h1>
+            <form action="">
+                <input type="email" name="email" id="email" placeholder="Digite seu email">
+                <input type="password" name="password" id="password" placeholder="Digite sua senha ">
+            </form>
+            <div id="line"><hr> <span>Ou</span><hr></div>
+
+            <button id="loginWithGoogle" class="loginWith"> <img src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png" width="25px"> <hr id="loginIcon"> Faça login com o google</button>
+            <button id="loginWithFacebook" class="loginWith"> <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png" width="25px"> <hr id="loginIcon">Faça login com o google</button>
+            <p>Esqueceu sua <a href="recoveryPage.html">senha?</a></p>
+            <p>Não tem uma conta? <a href="createAccount.html">inscreva-se</a></p>
+            <button id="loginButton" onclick="irParaPagina()">Fazer login</button>
+    </main>
+
+
+</body>
+<script>
+    function irParaPagina(){
+        window.alert("login confirmado, clique em ok para ser redirecionado para página principal");
+        window.location.href = "productPage.html";
+    }
+</script>
+</html>

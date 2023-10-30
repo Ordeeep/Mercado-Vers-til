@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #00C2FF;
+    font-family: 'Roboto', sans-serif;
+}
+
+#loginContainer {
+    width: 543px;
+    height: 786px;
+    margin: 0px auto;
+    margin-top: 90px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 59px 79px;
+
+    background-color: white;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+input,
+button {
+    font-size: 14px;
+    width: 384px;
+    height: 52px;
+    border-radius: 8px;
+    background-color: #FAF9FF;
+    border: 1px solid #E6E4F0;
+    box-shadow: 4px 4px 10px #F0EDFF;
+}
+
+#line {
+    margin: 28px 0;
+    width: 384px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+hr {
+    width: 160px;
+    border-radius: 3px;
+    height: 0.6px;
+    background-color: #CDCDCD;
+}
+
+span {
+    margin: 0 9px;
+}
+
+.loginWith {
+    font-size: 15px;
+    text-align: left;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+}
+
+.loginWith+.loginWith {
+    margin-top: 16px;
+    margin-bottom: 19px;
+}
+
+a {
+    color: #00C2FF;
+}
+
+p+p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: left;
+}
+
+#loginButton {
+    width: 176px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: #00C2FF;
+    color: white;
+}
+
+#buttonsArea {
+    margin-top: 5px;
+    gap: 20px;
+    display: flex;
+}
+
+#testando {
+    margin-top: 51px;
+}
+
+#buttonsArea .button2 {
+    background-color: #FBFBFB;
+    color: black;
+}
+
+#loginIcon {
+    width: 0px;
+    height: 30px;
+}
+
+#email {
+    background-image: url(/assets/img/emailIcon.png);
+}
+
+#password {
+    background-image: url(/assets/img/passwordIcon.png);
+}
+
+#user {
+    background-image: url(/assets/img/userIcon.png);
+}
+
+#repeatPassword {
+    background-image: url(/assets/img/passwordIcon.png);
+}
+
+input {
+    font-size: 14px;
+    color: black;
+    padding-left: 35px;
+    background-repeat: no-repeat;
+    background-position: 11px;
+}
+
+form input:focus {
+    border-color: blue;
+}
+
+button:hover {
+    cursor: pointer;
+}

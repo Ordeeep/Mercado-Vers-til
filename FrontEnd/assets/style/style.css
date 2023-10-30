@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Roboto&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #EBEBEB;
+}
+
+header {
+    width: 100%;
+    height: 64px;
+    background-color: white;
+
+    padding: 0px 328px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo {
+    font-size: 40px;
+}
+
+img {
+    width: 30px;
+}
+
+header #inputSearch {
+    width: 606px;
+    height: 46px;
+    border-radius: 8px;
+    padding-left: 22px;
+
+    background-color: #F0F0F0;
+    border: 1px solid #C5C5C5;
+    font-size: 18px;
+
+    background-image: url(/assets/img/searchIcon.png);
+    background-repeat: no-repeat;
+    background-position: 560px;
+}
+
+main {
+    padding: 0px 328px;
+}
+
+main nav {
+    display: flex;
+    margin: 51px 0px;
+    height: 62px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 0px 22px;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+main nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+main nav ul li {
+    font-size: 15px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+main nav ul li #navUlLiIcons {
+    width: 20px;
+}
+
+main nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.loginLinks {
+    color: #41B5F5;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+main #productPhoto #firstProductImage {
+    width: 544px;
+    width: 462px;
+}
+
+main #productContainer {
+    display: flex;
+    padding: 48px 43px;
+    background-color: white;
+
+    gap: 20px;
+}
+
+main #productContainer #productPhoto {
+    width: 756px;
+    height: 600px;
+    background-color: #EBEBEB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+main #productContainer #otherProductImage img {
+    border-radius: 4px;
+    width: 50px;
+    border: 2px solid #aaaaaa;
+}
+
+main #productContainer #otherProductImage img:hover {
+    cursor: pointer;
+}
+
+main #productDescription {
+    background-color: #EBEBEB;
+
+    width: 380px;
+    height: 600px;
+    padding: 19px 10px;
+}
+
+main #productDescription .productStars {
+    width: 15px;
+    display: flex;
+    gap: 5px;
+
+    margin-top: 3px;
+    margin-bottom: 20px;
+}
+
+main #productDescription #productName {
+    font-size: 16px;
+}
+
+main #productPrice #productOldPrice {
+    font-size: 14px;
+    color: #D70000;
+    font-weight: bold;
+    text-decoration: line-through;
+    display: block;
+}
+
+main #productPrice #productPrice {
+    font-size: 25px;
+}
+
+main #productPrice #productPromo {
+    color: #1D9200;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+sup {
+    vertical-align: 6px;
+}
+
+main #productPrice #productParcelas {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+main #productDescriptionButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+main #productDescriptionButtons button {
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+main #productDescriptionButtons button:hover {
+    cursor: pointer;
+}
+
+main #productDescriptionButtons #productBuy {
+    color: white;
+    background-color: #00C2FF;
+}
+
+main #productDescriptionButtons #productAddToCart {
+    color: #0085FF;
+    background-color: #DAEBF0;
+}
+
+#spanHelp {
+    margin-top: 22px;
+    margin-bottom: 27px;
+    display: block;
+    font-size: 18px;
+}
+
+main #productListDescription span {
+    font-size: 17px;
+}
+
+main #productListDescription ul {
+    margin-top: 10px;
+    margin-left: 20px;
+    list-style: disc;
+}
+
+main #productListDescription ul li {
+    font-size: 14px;
+}
+
+
+main #productUserReview {
+    padding: 43px;
+    background-color: white;
+}
+
+main #productUserReview hr {
+    border: 1px solid #EBEBEB;
+    border-radius: 2px;
+}
+
+main #productUserReview h1 {
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+main #productUserReview #productUserReviewStars span {
+    font-size: 70px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+main #productUserReview #productUserReviewStars .productStars {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 24px;
+}
+
+main #productUserReview #productUserReviewStars .productStars img {
+    width: 26px;
+}
+
+main #productUserAddComment {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#productUserAddComment #commentDate {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+#productUserAddComment #userId {
+    font-size: 20px;
+}
+
+#productUserAddStars img {
+    margin-top: 10px;
+    margin-bottom: 17px;
+    width: 21px;
+}
+
+#productUserAddComment #productUserAddCommentInput {
+    padding-left: 10px;
+    margin: 0 auto;
+    font-size: 14px;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #C1C1C1;
+    padding-bottom: 5px;
+    margin-bottom: 38px;
+}
+
+#productUserAddComment #productUserAddCommentInput:focus {
+    outline: 0;
+}
+
+#productUserAddPhotos {
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+
+    margin-bottom: 33px;
+}
+
+#productUserAddPhotos .quads:hover {
+    cursor: pointer;
+}
+
+#productUserAddPhotos .quads {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+#productUserAddPhotos .quads {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.commentArea {
+    margin-bottom: 27px;
+}
+
+
+#productUserStars img {
+    margin-top: 10px;
+    margin-bottom: 17px;
+    width: 21px;
+}
+
+#productUserPhotos {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+    margin-bottom: 33px;
+}
+
+#productUserPhotos .quads:hover {
+    cursor: pointer;
+}
+
+#productUserPhotos .quads {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+#productUserPhotos .quads {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+main #productUserComment {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#productUserComment #commentDate {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+#productUserComment #userId {
+    font-size: 20px;
+}
+
+footer {
+    margin-top: 37px;
+    height: 430px;
+    background-color: white;
+}
+
+footer #footerCards hr {
+    height: 198px;
+    align-self: center;
+    border: 1px solid #EBEBEB;
+}
+
+#footerCards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    margin-bottom: 53px;
+}
+
+.footerInfos {
+    margin-top: 55px;
+    text-align: center;
+    width: 415px;
+    height: 248px;
+}
+
+.footerInfos img {
+    width: 158px;
+}
+
+.footerInfos .footerTitle,
+.footerDescription {
+    display: block;
+}
+
+.footerTitle {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.footerDescription {
+    font-size: 16px;
+}
+
+
+footer #footerNav #footerUl {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+footer #footerNav #footerUl a {
+    color: black;
+    text-decoration: none;
+}
+
+
+footer #footerNav #footerUl li {
+    list-style: none;
+}
