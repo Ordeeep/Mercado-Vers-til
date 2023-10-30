@@ -17,7 +17,7 @@ header {
     height: 64px;
     background-color: white;
 
-    padding: 0px 328px;
+    padding: 0px 19vw;
 
     display: flex;
     flex-direction: row;
@@ -34,22 +34,21 @@ img {
 }
 
 header #inputSearch {
-    width: 606px;
+    width: 31vw;
     height: 46px;
     border-radius: 8px;
     padding-left: 22px;
-
     background-color: #F0F0F0;
     border: 1px solid #C5C5C5;
     font-size: 18px;
 
     background-image: url(/assets/img/searchIcon.png);
     background-repeat: no-repeat;
-    background-position: 560px;
+    background-position: calc(100% - 20px) center;
 }
 
 main {
-    padding: 0px 328px;
+    padding: 0px 19vw;
 }
 
 main nav {
@@ -67,7 +66,7 @@ main nav {
 main nav ul {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
 main nav ul li {
@@ -93,20 +92,21 @@ main nav ul li a {
 }
 
 main #productPhoto #firstProductImage {
-    width: 544px;
-    width: 462px;
+    max-width: 462px; /* Define a largura máxima do contêiner */
+    width: 100%; /* Garante que o contêiner ocupe 100% do espaço disponível */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    overflow: hidden; /* Evita que a imagem ultrapasse as bordas */
 }
 
 main #productContainer {
     display: flex;
     padding: 48px 43px;
     background-color: white;
-
     gap: 20px;
 }
 
 main #productContainer #productPhoto {
-    width: 756px;
+    width: 100%;
     height: 600px;
     background-color: #EBEBEB;
     display: flex;
@@ -128,23 +128,25 @@ main #productContainer #otherProductImage img:hover {
 
 main #productDescription {
     background-color: #EBEBEB;
-
-    width: 380px;
-    height: 600px;
+    width: 45%;
     padding: 19px 10px;
 }
 
-main #productDescription .productStars {
+
+main #productDescription .productStarsIcons img{
     width: 15px;
+    height: 15px;
+}
+main #productDescription .productStarsIcons {
     display: flex;
     gap: 5px;
-
     margin-top: 3px;
     margin-bottom: 20px;
 }
 
 main #productDescription #productName {
     font-size: 16px;
+    
 }
 
 main #productPrice #productOldPrice {
@@ -157,6 +159,24 @@ main #productPrice #productOldPrice {
 
 main #productPrice #productPrice {
     font-size: 25px;
+}
+
+@media screen and (max-width: 1490px){
+
+    main #productContainer{
+        flex-direction: column;
+    }
+
+    main #productDescription{
+        width: 100%;
+        display: flex;
+    }
+
+    main #spanHelp{
+        display: block;
+        margin: 10px 0px;
+    }
+    
 }
 
 main #productPrice #productPromo {
@@ -178,12 +198,11 @@ main #productPrice #productParcelas {
 main #productDescriptionButtons {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
 }
 
 main #productDescriptionButtons button {
-    width: 300px;
+    width: 60%;
     height: 50px;
     border-radius: 8px;
     border: none;
