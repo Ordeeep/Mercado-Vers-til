@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
+
 <body>
     <header>
         <span id="logo">MV</span>
@@ -13,34 +15,57 @@
     </header>
 
     <main>
-        
-    </main>
+        <nav>
+            <ul>
+                <li><img id="navUlLiIcons" src="/assets/img/computerIcon.png" alt="icone"><a href="#">Computadores,
+                        laptops</a></li>
+                <li><img id="navUlLiIcons" src="/assets/img/phoneIcon.png" alt="icone"><a href="#">Celulares e
+                        acessórios</a></li>
+                <li><img id="navUlLiIcons" src="/assets/img/dressIcon.png" alt="icone"><a href="#">Roupas e calçados</a>
+                </li>
+                <li><img id="navUlLiIcons" src="/assets/img/houseIcon.png" alt="icone"><a href="#">Casa e
+                        eletrodomésticos</a></li>
+                <li><img id="navUlLiIcons" src="/assets/img/cartIcon.png" alt="icone"><a href="#">Carrinho</a></li>
+            </ul>
 
+            <ul>
+                <li><a class="loginLinks" href="createAccount.html">Crie sua conta</a></li>
+                <li><a class="loginLinks" href="loginPage.html">Entre</a></li>
+            </ul>
+        </nav>
+
+
+        <div id="index-product-container">
+
+        </div>
+    </main>
 
     <footer>
 
         <div id="footerCards">
-
             <div class="footerInfos">
                 <span class="footerTitle">Escolha como pagar</span>
                 <img src="assets/img/cardIcon.png" alt="">
-                <span class="footerDescription">No mercado versátil você é quem manda tendo os seguintes tipos de pagamentos: Boleto, Pix e no crédito ou debito.</span>
+                <span class="footerDescription">No mercado versátil você é quem manda tendo os seguintes tipos de
+                    pagamentos: Boleto, Pix e no crédito ou debito.</span>
             </div>
             <hr>
 
             <div class="footerInfos">
                 <span class="footerTitle">Frete grátis</span>
                 <img src="assets/img/expressBoxIcon.png" alt="">
-                <span class="footerDescription">Aproveite o frete grátis a partir de R$100 em compras e economize enquanto desfruta de produtos de alta qualidade.</span>
+                <span class="footerDescription">Aproveite o frete grátis a partir de R$100 em compras e economize
+                    enquanto desfruta de produtos de alta qualidade.</span>
             </div>
             <hr>
             <div class="footerInfos">
                 <span class="footerTitle">Segurança</span>
                 <img src="assets/img/shieldIcon.png" alt="">
-                <span class="footerDescription">A sua segurança é a nossa prioridade, garantindo uma experiência de compra online protegida e confiável.</span>
+                <span class="footerDescription">A sua segurança é a nossa prioridade, garantindo uma experiência de
+                    compra online protegida e confiável.</span>
             </div>
         </div>
-        
+
         <hr id="footerHr">
 
         <nav id="footerNav">
@@ -52,7 +77,9 @@
                 <li><a href="#">Informações sobre segurança</a></li>
             </ul>
         </nav>
-    
     </footer>
+
+    <script src="assets/js/loadProducts.js"></script>
 </body>
+
 </html>

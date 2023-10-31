@@ -8,6 +8,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     background-color: #EBEBEB;
 }
@@ -92,10 +96,14 @@ main nav ul li a {
 }
 
 main #productPhoto #firstProductImage {
-    max-width: 462px; /* Define a largura máxima do contêiner */
-    width: 100%; /* Garante que o contêiner ocupe 100% do espaço disponível */
-    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-    overflow: hidden; /* Evita que a imagem ultrapasse as bordas */
+    max-width: 462px;
+    /* Define a largura máxima do contêiner */
+    width: 100%;
+    /* Garante que o contêiner ocupe 100% do espaço disponível */
+    margin: 0 auto;
+    /* Centraliza o contêiner horizontalmente */
+    overflow: hidden;
+    /* Evita que a imagem ultrapasse as bordas */
 }
 
 main #productContainer {
@@ -107,7 +115,7 @@ main #productContainer {
 
 main #productContainer #productPhoto {
     width: 100%;
-    height: 600px;
+    height: 620px;
     background-color: #EBEBEB;
     display: flex;
     flex-direction: column;
@@ -133,10 +141,11 @@ main #productDescription {
 }
 
 
-main #productDescription .productStarsIcons img{
+main #productDescription .productStarsIcons img {
     width: 15px;
     height: 15px;
 }
+
 main #productDescription .productStarsIcons {
     display: flex;
     gap: 5px;
@@ -146,7 +155,7 @@ main #productDescription .productStarsIcons {
 
 main #productDescription #productName {
     font-size: 16px;
-    
+
 }
 
 main #productPrice #productOldPrice {
@@ -161,22 +170,30 @@ main #productPrice #productPrice {
     font-size: 25px;
 }
 
-@media screen and (max-width: 1490px){
+@media screen and (max-width: 1507px) {
 
-    main #productContainer{
+    main #productContainer {
         flex-direction: column;
     }
 
-    main #productDescription{
+    main #productDescription {
         width: 100%;
         display: flex;
     }
 
-    main #spanHelp{
+    main #spanHelp {
         display: block;
         margin: 10px 0px;
     }
-    
+
+    main #productDescriptionButtons {
+        width: 60%;
+    }
+
+    main .mediaProductName {
+        width: 60% !important;
+        margin-left: 20px;
+    }
 }
 
 main #productPrice #productPromo {
@@ -202,7 +219,7 @@ main #productDescriptionButtons {
 }
 
 main #productDescriptionButtons button {
-    width: 60%;
+    width: 99%;
     height: 50px;
     border-radius: 8px;
     border: none;
@@ -254,6 +271,7 @@ main #productUserReview {
 main #productUserReview hr {
     border: 1px solid #EBEBEB;
     border-radius: 2px;
+
 }
 
 main #productUserReview h1 {
@@ -451,4 +469,116 @@ footer #footerNav #footerUl a {
 
 footer #footerNav #footerUl li {
     list-style: none;
+}
+
+/*Index.html*/
+
+/*Parte dos quads dos produtos*/
+main #index-product-container{
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+main .index-product-quad {
+    cursor: pointer;
+    background-color: white;
+
+    width: 250px;
+    height: 403px;
+
+    border-radius: 8px;
+}
+
+main .index-product-quads-image {
+    height: 230px;
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: end;
+
+}
+
+main .index-product-quads-image-balls {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-self: center;
+
+}
+
+main .index-product-quads-image-balls-icon {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #9D9D9D;
+    border-radius: 10px;
+}
+
+main .index-product-name-container {
+    display: flex;
+    flex-direction: column;
+}
+
+main .index-product-name-container,
+.index-product-price-container {
+    margin-left: 8px;
+}
+
+main .index-product-name-container .index-product-name {
+    font-size: 1.10rem;
+    margin-top: 5px;
+}
+
+main .index-product-name-container .index-product-description {
+    font-size: 0.83rem;
+}
+main .index-product-quad hr{
+    height: 0.1px;
+    background-color: gray;
+    border: none;
+}
+main .index-product-price-container {
+    margin-top: 10px;
+}
+
+main .index-product-price-container .index-product-old-price {
+    font-size: 0.75rem;
+    color: #D70000;
+    font-weight: 800;
+    display: block;
+    text-decoration: line-through;
+    margin-bottom: 3px;
+}
+
+main .index-product-price-container .index-product-price{
+    font-size: 1.36rem;
+}
+
+main .index-product-price-container .index-product-percentage-promotion{
+    color: #1D9200;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 3px;
+}
+
+main .index-product-price-container .index-product-installments{
+    display: block;
+    font-size: 0.80rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*Fim dos quads*/ 
+
+.textForAdorableProducts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
