@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aguardando pagamento</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body>
+    <header>
+        <span id="logo"><a href="index.html">MV</a></span>
+    </header>
+
+    <main class="productAwaitingPayment-hero-main">
+        <div class="productAwaitingPayment-accept-div">
+            <div class="accept-title">
+                <img src="assets/img/acceptIcon.png" alt="">
+                <span>Pedido aceito, aguardando pagamento</span>
+            </div>
+
+            <button class="change-payment" onclick="voltarParaProductBuy()">Alterar forma de pagamento</button>
+        </div>
+
+        <section class="section-payment-type">
+            <div class="payment-type-hero-container">
+                <div class="buy-info">
+                    <span class="buy-info-title">Informações do pedido</span>
+
+                    <div class="buy-info-container-for-text">
+                        <span class="buy-info-bold">Numero do pedido:</span>
+                        <span id="buy-info-product-number" class="buy-info-gray">301273192369</span>
+
+                    </div>
+                    <div class="buy-info-container-for-text">
+                        <span class="buy-info-bold">Data da compra:</span>
+                        <span id="buy-info-product-data" class="buy-info-gray">25/05/2023 as 01:00</span>
+
+                    </div>
+                    <div class="buy-info-container-for-text">
+                        <span class="buy-info-bold">Informações do pedido:</span>
+                        <span id="buy-info-product-price" class="buy-info-gray">BRL 1.200,00</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="paymentTutorial">
+                    <span class="buy-info-title">Guia de pagamento com Pix</span>
+                    <ol class="paymentTutorial-ol">
+                        <li>
+                            <span>1. Abra o app do seu banco e encontre a opção de pagamento "Pix".</span>
+                        </li>
+                        <li>
+                            <span>2. Abra o app do seu banco e escaneie o QR code.</span>
+                        </li>
+                        <li>
+                            <span>3. Verifique os detalhes e finalize o pedido.</span>
+                        </li>
+                    </ol>
+
+                    <span onclick="">Clique aqui para copiar o código!</span>
+                </div>
+            </div>
+            <div class="payment-qrCode-area">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=testando" id="qrCode" alt="">
+                <span class="payment-qr-span">Escaneie o QR para realizar o pagamento</span>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    function voltarParaProductBuy(){
+        window.location.href = "productBuy.html"
+    }
+</script>
+
+</html>

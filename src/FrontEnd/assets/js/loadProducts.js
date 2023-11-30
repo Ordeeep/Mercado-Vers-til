@@ -8,7 +8,8 @@ function loadProducts() {
             novoProduto.className = "index-product-quad";
 
             novoProduto.innerHTML = `
-            <div class="index-product-quad"><a class="index-product-quad-link" href="http://127.0.0.1:5500/productPage.html">
+            <div class="index-product-quad">
+            <a class="index-product-quad-link" href="productPage.html">
             <div class="index-product-quads-image">
                 <div class="index-product-quads-image-balls">
                     <div class="index-product-quads-image-balls-icon"></div>

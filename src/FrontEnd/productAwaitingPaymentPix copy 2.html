@@ -20,7 +20,7 @@
                 <span>Pedido aceito, aguardando pagamento</span>
             </div>
 
-            <button class="change-payment">Alterar forma de pagamento</button>
+            <button class="change-payment" onclick="voltarParaProductBuy()">Alterar forma de pagamento</button>
         </div>
 
         <section class="section-payment-type">
@@ -46,29 +46,32 @@
                 <hr>
                 <div class="paymentTutorial">
                     <span class="buy-info-title">Guia de pagamento com Pix</span>
-                    <ul class="paymentTutorial-ul">
+                    <ol class="paymentTutorial-ol">
                         <li>
-                            <span>Abra o app do seu banco e encontre a opção de pagamento "Pix".</span>
+                            <span>1. Abra o app do seu banco e encontre a opção de pagamento "Pix".</span>
                         </li>
                         <li>
-                            <span>Abra o app do seu banco e escaneie o QR code.</span>
+                            <span>2. Abra o app do seu banco e escaneie o QR code.</span>
                         </li>
                         <li>
-                            <span>Verifique os detalhes e finalize o pedido.</span>
+                            <span>3. Verifique os detalhes e finalize o pedido.</span>
                         </li>
-                    </ul>
+                    </ol>
 
                     <span onclick="">Clique aqui para copiar o código!</span>
                 </div>
             </div>
             <div class="payment-qrCode-area">
                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=testando" id="qrCode" alt="">
-            <span class="payment-qr-span">Escaneie o QR para realizar o pagamento</span>
+                <span class="payment-qr-span">Escaneie o QR para realizar o pagamento</span>
             </div>
         </section>
     </main>
 </body>
 <script>
+    function voltarParaProductBuy(){
+        window.location.href = "productBuy.html"
+    }
 </script>
 
 </html>

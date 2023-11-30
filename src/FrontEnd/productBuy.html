@@ -78,7 +78,7 @@
                 </div>
                 <hr>
                 <div id="productBuy-center-button">
-                    <button id="productBuy-product-resume-end-purchase">Finalizar
+                    <button id="productBuy-product-resume-end-purchase" onclick="irParaPaginaDePagamento()">Finalizar
                         compra</button>
 
 
@@ -102,7 +102,7 @@
             </div>
             <div id="product-buy-info-select-payment">
                 <div class="product-buy-payment-form-container">
-                    <div id="payment-credit-radio" class="payment-selection-radio"></div>
+                    <div id="payment-credit-radio" class="payment-selection-radio" onclick="handleRadioClick('payment-credit-radio')"></div>
                     <img src="assets/img/cardIcon.png" alt="icone cartão de credito">
                     <div class="product-buy-payment-credit">
                         <span id="product-buy-payment-credit-data"
@@ -114,12 +114,12 @@
                     <span id="product-buy-edit-credit-data" onclick="openSelectPaymentAddNewCard(), closeSelectPaymentWindow()">Editar</span>
                 </div>
                 <div class="product-buy-payment-form-container">
-                    <div id="payment-pix-radio" class="payment-selection-radio"></div>
+                    <div id="payment-pix-radio" class="payment-selection-radio" onclick="handleRadioClick('payment-pix-radio')"></div>
                     <img src="assets/img/pixIcon.png" alt="icone de pix">
                     <span>Pix</span>
                 </div>
                 <div class="product-buy-payment-form-container">
-                    <div id="payment-boleto-radio" class="payment-selection-radio"></div>
+                    <div id="payment-boleto-radio" class="payment-selection-radio" onclick="handleRadioClick('payment-boleto-radio')"></div>
                     <img src="assets/img/boletoIcon.png" alt="icone do boleto">
                     <span>Boleto</span>
                 </div>
@@ -130,7 +130,6 @@
                 <button type="submit" id="confirm-payment" onclick="closeSelectPaymentWindow()">Confirmar</button>
             </div>
         </div>
-
 
         <div id="add-new-card-credit">
             <div id="product-buy-infos-payment">
@@ -183,7 +182,6 @@
             </form>
         </div>
 
-
     </main>
 
 </body>
@@ -201,6 +199,26 @@
     function closeSelectPaymentWindow() {
         document.getElementById("selecionar-metodo-de-pagamento").style.display = "none";
     }
+
+
+
+    let selectedValue;
+    function handleRadioClick(radioId) {
+    var radios = document.querySelectorAll('.payment-selection-radio');
+    radios.forEach(function(radio) {
+      radio.classList.remove('selected');
+    });
+
+    var selectedRadio = document.getElementById(radioId);
+    selectedRadio.classList.add('selected');
+
+    // Atualizar a variável global com o valor do radio selecionado
+    selectedValue = selectedRadio.textContent;
+  }
+
+  function irParaPaginaDePagamento(){
+    window.location.href = 'productAwaitingPaymentPix.html';
+  }
 </script>
 
 </html>

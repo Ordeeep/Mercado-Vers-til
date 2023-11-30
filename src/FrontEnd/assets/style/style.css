@@ -475,11 +475,10 @@ footer #footerNav #footerUl li {
 
 /*Parte dos quads dos produtos*/
 main #index-product-container {
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
     display: flex;
-    gap: 10px;
 }
 
 main .index-product-quad {
@@ -488,7 +487,7 @@ main .index-product-quad {
 
     width: 250px;
     height: 403px;
-
+    margin-bottom: 5px;
     border-radius: 8px;
 }
 
@@ -995,7 +994,11 @@ main #productBuy-infos {
     height: 50px;
 }
 .payment-qrCode-area{
-    margin-left: 100px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 .productAwaitingPayment-hero-main .change-payment{
     width: 255px;
@@ -1020,7 +1023,7 @@ main #productBuy-infos {
 .section-payment-type .buy-info-title{
     font-size: 20px;
     font-weight: 800;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     display: block;
 }
 .section-payment-type .buy-info-gray{
@@ -1039,13 +1042,30 @@ main #productBuy-infos {
 .paymentTutorial{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
-.paymentTutorial-ul{
-    list-style: number;
+.paymentTutorial-ol{
+    list-style: none;
+}
+.paymentTutorial-ol li+li{
+    margin-top: 8px;
+}
+.payment-qr-span{
+    width: 75%;
+    font-size: 18px;
+    font-weight: 800;
 }
 #qrCode{
     width: 250px;
     height: 250px;
+    display: block;
 }
+#codigoDeBarras{
+    margin-top: 40px;
+    width: 300px;
+}
+.selected {
+    background-color: #00C2FF;
+  }
 /*Aguardando pagamento Fim*/
