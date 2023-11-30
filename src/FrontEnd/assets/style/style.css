@@ -654,6 +654,10 @@ main #productBuy-payment-container #productBuy-payment-infos-span {
     margin-bottom: 35px;
 
 }
+#productBuy-payment-type-data{
+    font-weight: 800;
+    font-size: 18px;
+}
 
 main #productBuy-payment-container #productBuy-payment-type {
     width: 60%;
@@ -718,13 +722,15 @@ main #productBuy-product-description-infos #productBuy-product-price {
 
 
 main #productBuy-product-resume-container {
+    width: 30%;
     box-sizing: border-box;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    border-radius: 8px;
     background-color: white;
+
+    border-radius: 8px;
 }
 
 main #productBuy-product-price-container {
@@ -759,6 +765,7 @@ main #productBuy-product-resume-container hr {
 }
 
 main #productBuy-center-button {
+
     display: flex;
     justify-content: center;
 }
@@ -781,4 +788,264 @@ main #productBuy-infos {
     width: 100%;
 }
 
+
+
 /*productBuy end*/
+
+/*Selecionar metodo de pagamento começo*/
+#selecionar-metodo-de-pagamento {
+    border-radius: 12px;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    position: fixed;
+    display: none;
+    width: 45%;
+    height: 70%;
+    background-color: white;
+    z-index: 2;
+
+    padding: 31px;
+}
+
+.payment-selection-span{
+    text-align: center;
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
+}
+.alinhar-icone-e-span{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alinhar-icone-e-span img{
+    width: 20px;
+}
+#product-buy-infos-payment{
+    margin-bottom: 30px;
+}
+.payment-selection-span-2{
+    color: #5EAC24;
+    font-size: 18px;
+}
+#product-buy-info-select-payment{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.product-buy-payment-form-container{
+    width: 100%;
+    height: 72px;
+    border: 0.1px solid #BDBDBD;
+    border-radius: 13px;
+
+
+    padding-left: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.product-buy-payment-form-container img{
+    width: 30px;
+    height: 30px;
+}
+
+.payment-selection-radio{
+    width: 27px;
+    height: 27px;
+    border: 1px solid #BDBDBD;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+.credit-data-to-style{
+    font-weight: 700;
+    font-size: 18px;
+}
+.product-buy-payment-credit #product-buy-payment-juros{
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+}
+#product-buy-edit-credit-data {
+    margin-left: 5px;
+    margin-bottom: 13px;
+    color: #0085FF;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#selecionar-metodo-de-pagamento hr, #add-new-card-credit hr{
+    margin-top: 160px;
+    margin-bottom: 30px;
+}
+#payment-confirm-button-container{
+    display: flex;
+    justify-content: center;
+}
+#confirm-payment{
+    border: none;
+    color: white;
+    font-size: 18px;
+    width: 320px;
+    height: 46px;
+    text-align: center;
+    background-color: #00C2FF;
+    border-radius: 13px;
+    box-shadow: 10 10 #D70000;
+    cursor: pointer;
+}
+/*Selecionar metodo de pagamento final*/
+
+
+/*Selecionar ou adicionar novo cartão de credito Inicio*/
+
+#add-new-card-credit {
+    border-radius: 12px;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    position: fixed;
+    display: none;
+    width: 45%;
+    height: 70%;
+    background-color: white;
+    padding: 31px;
+    z-index: 1;
+}
+.list-card-span-template{
+    font-size: 18px;
+    font-weight: 800;
+}
+.card-data-left #card-number{
+    width: 95%;
+}
+#card-morth-day-data{
+    margin-top: 15px;
+    width: 118%;
+}
+#titular-da-compra{
+    margin-bottom: 15px;
+}
+.new-card-input-class{
+    border: 1px solid #BDBDBD;
+    border-radius: 13px;
+    font-size: 18px;
+    padding: 15px 0px 15px 20px;
+}
+#card-morth-day-data input{
+    width: 40%;
+}
+
+.card-data-right input{
+    width: 100%;
+}
+.product-buy-add-new-card-div{
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-card-input-class::placeholder{
+    color: #888888;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+.product-buy-card-parcelas-selection{
+    margin-top: 7px;
+}
+#input-selection-parcelas{
+    width: 47%;
+}
+/*Selecionar ou adicionar novo cartão de credito Fim*/
+
+/*Aguardando pagamento Inicio*/
+
+.productAwaitingPayment-accept-div{
+    padding: 18px 23px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productAwaitingPayment-accept-div .accept-title{
+    font-size: 20px;
+    font-weight: 800;
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.productAwaitingPayment-accept-div .accept-title img{
+    width: 50px;
+    height: 50px;
+}
+.payment-qrCode-area{
+    margin-left: 100px;
+}
+.productAwaitingPayment-hero-main .change-payment{
+    width: 255px;
+    height: 46px;
+
+    background-color: #00C2FF;
+    color: #FFFFFF;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+
+    border-radius: 20px;
+}
+.section-payment-type{
+    margin-top: 30px;
+    width: 70%;
+    display: flex;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    padding: 34px 20px;
+}
+.section-payment-type .buy-info-title{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    display: block;
+}
+.section-payment-type .buy-info-gray{
+    color: #ADADAD;
+}
+.section-payment-type .buy-info-bold{
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.section-payment-type hr{
+    margin: 20px 0px;
+    border: none;
+    border-bottom: 0.5px solid #BDBDBD;
+}
+.paymentTutorial{
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentTutorial-ul{
+    list-style: number;
+}
+#qrCode{
+    width: 250px;
+    height: 250px;
+}
+/*Aguardando pagamento Fim*/

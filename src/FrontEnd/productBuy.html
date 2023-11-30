@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <span id="logo">MV</span>
+       <span id="logo"><a href="index.html">MV</a></span>
     </header>
 
     <main id="productBuy-hero-main">
@@ -35,7 +35,8 @@
                     <span id="productBuy-payment-type-infos">Juros de 2.50% para pagamento em 2 vezes</span>
                 </div>
                 <div id="productBuy-change-type-paymente">
-                    <span id="productBuy-change-type-paymente"><a href="#">Mudar forma de pagamento</a></span>
+                    <span id="productBuy-change-type-paymente"><a href="#" onclick="openSelectPaymentWindow()">Mudar
+                            forma de pagamento </a></span>
                 </div>
             </div>
 
@@ -77,20 +78,129 @@
                 </div>
                 <hr>
                 <div id="productBuy-center-button">
-                    <button id="productBuy-product-resume-end-purchase">Finalizar compra</button>
+                    <button id="productBuy-product-resume-end-purchase">Finalizar
+                        compra</button>
 
 
                 </div>
             </div>
 
-            <div id="productBuy-infos">
+            <!-- <div id="productBuy-infos">
                 <span>Mercado Versátil mantém suas informações e pagamentos seguros</span>
-            </div>
+            </div> -->
 
         </aside>
+
+
+        <div id="selecionar-metodo-de-pagamento">
+            <div id="product-buy-infos-payment">
+                <span class="payment-selection-span">Selecione o seu método de pagamento</span>
+                <div class="alinhar-icone-e-span">
+                    <img src="assets/img/greenShildIcon.png" alt="">
+                    <span class="payment-selection-span-2">Suas informações estão seguras</span>
+                </div>
+            </div>
+            <div id="product-buy-info-select-payment">
+                <div class="product-buy-payment-form-container">
+                    <div id="payment-credit-radio" class="payment-selection-radio"></div>
+                    <img src="assets/img/cardIcon.png" alt="icone cartão de credito">
+                    <div class="product-buy-payment-credit">
+                        <span id="product-buy-payment-credit-data"
+                            class="credit-data-to-style">999999********9999</span>
+                        <span id="product-buy-payment-price" class="credit-data-to-style">R$ 1.200,00</span>
+                        <span id="product-buy-payment-parcelas" class="credit-data-to-style">12 meses</span>
+                        <span id="product-buy-payment-juros">Juros de 2.50% para pagamento em 2 vezes</span>
+                    </div>
+                    <span id="product-buy-edit-credit-data" onclick="openSelectPaymentAddNewCard(), closeSelectPaymentWindow()">Editar</span>
+                </div>
+                <div class="product-buy-payment-form-container">
+                    <div id="payment-pix-radio" class="payment-selection-radio"></div>
+                    <img src="assets/img/pixIcon.png" alt="icone de pix">
+                    <span>Pix</span>
+                </div>
+                <div class="product-buy-payment-form-container">
+                    <div id="payment-boleto-radio" class="payment-selection-radio"></div>
+                    <img src="assets/img/boletoIcon.png" alt="icone do boleto">
+                    <span>Boleto</span>
+                </div>
+
+            </div>
+            <hr>
+            <div id="payment-confirm-button-container">
+                <button type="submit" id="confirm-payment" onclick="closeSelectPaymentWindow()">Confirmar</button>
+            </div>
+        </div>
+
+
+        <div id="add-new-card-credit">
+            <div id="product-buy-infos-payment">
+                <span class="payment-selection-span">Adicione seu cartão de crédito ou débito</span>
+                <div class="alinhar-icone-e-span">
+                    <img src="assets/img/greenShildIcon.png" alt="">
+                    <span class="payment-selection-span-2">Suas informações estão seguras</span>
+                </div>
+            </div>
+
+            <form action="" id="add-new-card-credit-form">
+                <span class="list-card-span-template">1. Adicione ou Edite o seu cartão</span>
+                <div class="product-buy-add-new-card-div">
+                    <div class="card-data-left">
+                        <input type="number" id="card-number" class="new-card-input-class"
+                            placeholder="Número do cartão">
+                        <div id="card-morth-day-data">
+                            <input type="number" id="card-morth" class="new-card-input-class" placeholder="MM">
+                            <input type="number" id="card-day" class="new-card-input-class" placeholder="DD">
+                        </div>
+                    </div>
+
+                    <div class="card-data-right">
+                        <input type="text" id="titular-da-compra" class="new-card-input-class"
+                            placeholder="Nome do titular da compra">
+                        <input type="number" id="card-CVV" class="new-card-input-class"
+                            placeholder="Código de segurança (CVV)">
+                    </div>
+                </div>
+                <span class="list-card-span-template">2. Selecione as prestações</span>
+                <div class="product-buy-card-parcelas-selection">
+                    <select name="" id="input-selection-parcelas" class="new-card-input-class">
+                        <option value="parcela1">teste parcela1</option>
+                        <option value="parcela2">teste parcela2</option>
+                        <option value="parcela3">teste parcela3</option>
+                        <option value="parcela4">teste parcela4</option>
+                        <option value="parcela5">teste parcela5</option>
+                        <option value="parcela6">teste parcela6</option>
+                        <option value="parcela7">teste parcela7</option>
+                        <option value="parcela8">teste parcela8</option>
+                        <option value="parcela9">teste parcela9</option>
+                        <option value="parcela10">teste parcela10</option>
+                    </select>
+                </div>
+                <span class="list-card-span-tempalte-2">É possível parcelar em até 12 vezes</span>
+                <hr>
+                <div id="payment-confirm-button-container">
+                    <button type="submit" id="confirm-payment" onclick="closeSelectPaymentAddNewCard(), openSelectPaymentWindow()">Confirmar</button>
+                </div>
+            </form>
+        </div>
+
 
     </main>
 
 </body>
+
+<script>
+    function openSelectPaymentAddNewCard() {
+        document.getElementById("add-new-card-credit").style.display = "block";
+    }
+    function closeSelectPaymentAddNewCard() {
+        document.getElementById("add-new-card-credit").style.display = "none";
+    }
+    function openSelectPaymentWindow() {
+        document.getElementById("selecionar-metodo-de-pagamento").style.display = "block";
+    }
+    function closeSelectPaymentWindow() {
+        document.getElementById("selecionar-metodo-de-pagamento").style.display = "none";
+    }
+</script>
 
 </html>
