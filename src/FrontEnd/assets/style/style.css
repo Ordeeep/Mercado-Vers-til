@@ -134,26 +134,26 @@ main #productContainer #otherProductImage img:hover {
     cursor: pointer;
 }
 
-main #productDescription {
+main #productContainer #productDescription {
     background-color: #EBEBEB;
     width: 45%;
     padding: 19px 10px;
 }
 
 
-main #productDescription .productStarsIcons img {
+main #productContainer #productDescription .productStarsIcons img {
     width: 15px;
     height: 15px;
 }
 
-main #productDescription .productStarsIcons {
+main #productContainer #productDescription .productStarsIcons {
     display: flex;
     gap: 5px;
     margin-top: 3px;
     margin-bottom: 20px;
 }
 
-main #productDescription #productName {
+main #productContainer #productDescription #productName {
     font-size: 16px;
 
 }
@@ -172,7 +172,8 @@ main #productPrice #productPrice {
 
 @media screen and (max-width: 1507px) {
 
-    main #productContainer {
+    main  #productContainer {
+        width: 100%;
         flex-direction: column;
     }
 
@@ -653,7 +654,8 @@ main #productBuy-payment-container #productBuy-payment-infos-span {
     margin-bottom: 35px;
 
 }
-#productBuy-payment-type-data{
+
+#productBuy-payment-type-data {
     font-weight: 800;
     font-size: 18px;
 }
@@ -808,34 +810,40 @@ main #productBuy-infos {
     padding: 31px;
 }
 
-.payment-selection-span{
+.payment-selection-span {
     text-align: center;
     display: block;
     font-size: 25px;
     font-weight: 600;
 }
-.alinhar-icone-e-span{
+
+.alinhar-icone-e-span {
     margin-top: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.alinhar-icone-e-span img{
+
+.alinhar-icone-e-span img {
     width: 20px;
 }
-#product-buy-infos-payment{
+
+#product-buy-infos-payment {
     margin-bottom: 30px;
 }
-.payment-selection-span-2{
+
+.payment-selection-span-2 {
     color: #5EAC24;
     font-size: 18px;
 }
-#product-buy-info-select-payment{
+
+#product-buy-info-select-payment {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.product-buy-payment-form-container{
+
+.product-buy-payment-form-container {
     width: 100%;
     height: 72px;
     border: 0.1px solid #BDBDBD;
@@ -849,12 +857,12 @@ main #productBuy-infos {
 }
 
 
-.product-buy-payment-form-container img{
+.product-buy-payment-form-container img {
     width: 30px;
     height: 30px;
 }
 
-.payment-selection-radio{
+.payment-selection-radio {
     width: 27px;
     height: 27px;
     border: 1px solid #BDBDBD;
@@ -862,15 +870,18 @@ main #productBuy-infos {
     cursor: pointer;
 
 }
-.credit-data-to-style{
+
+.credit-data-to-style {
     font-weight: 700;
     font-size: 18px;
 }
-.product-buy-payment-credit #product-buy-payment-juros{
+
+.product-buy-payment-credit #product-buy-payment-juros {
     display: block;
     font-size: 14px;
     font-weight: 500;
 }
+
 #product-buy-edit-credit-data {
     margin-left: 5px;
     margin-bottom: 13px;
@@ -880,15 +891,18 @@ main #productBuy-infos {
     cursor: pointer;
 }
 
-#selecionar-metodo-de-pagamento hr, #add-new-card-credit hr{
+#selecionar-metodo-de-pagamento hr,
+#add-new-card-credit hr {
     margin-top: 160px;
     margin-bottom: 30px;
 }
-#payment-confirm-button-container{
+
+#payment-confirm-button-container {
     display: flex;
     justify-content: center;
 }
-#confirm-payment{
+
+#confirm-payment {
     border: none;
     color: white;
     font-size: 18px;
@@ -900,6 +914,7 @@ main #productBuy-infos {
     box-shadow: 10 10 #D70000;
     cursor: pointer;
 }
+
 /*Selecionar metodo de pagamento final*/
 
 
@@ -919,57 +934,66 @@ main #productBuy-infos {
     padding: 31px;
     z-index: 1;
 }
-.list-card-span-template{
+
+.list-card-span-template {
     font-size: 18px;
     font-weight: 800;
 }
-.card-data-left #card-number{
+
+.card-data-left #card-number {
     width: 95%;
 }
-#card-morth-day-data{
+
+#card-morth-day-data {
     margin-top: 15px;
     width: 118%;
 }
-#titular-da-compra{
+
+#titular-da-compra {
     margin-bottom: 15px;
 }
-.new-card-input-class{
+
+.new-card-input-class {
     border: 1px solid #BDBDBD;
     border-radius: 13px;
     font-size: 18px;
     padding: 15px 0px 15px 20px;
 }
-#card-morth-day-data input{
+
+#card-morth-day-data input {
     width: 40%;
 }
 
-.card-data-right input{
+.card-data-right input {
     width: 100%;
 }
-.product-buy-add-new-card-div{
+
+.product-buy-add-new-card-div {
     margin-top: 7px;
     display: flex;
     justify-content: space-between;
 }
 
-.new-card-input-class::placeholder{
+.new-card-input-class::placeholder {
     color: #888888;
     font-size: 16px;
     font-weight: 400;
 }
 
 
-.product-buy-card-parcelas-selection{
+.product-buy-card-parcelas-selection {
     margin-top: 7px;
 }
-#input-selection-parcelas{
+
+#input-selection-parcelas {
     width: 47%;
 }
+
 /*Selecionar ou adicionar novo cartão de credito Fim*/
 
 /*Aguardando pagamento Inicio*/
 
-.productAwaitingPayment-accept-div{
+.productAwaitingPayment-accept-div {
     padding: 18px 23px;
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
@@ -981,7 +1005,7 @@ main #productBuy-infos {
     align-items: center;
 }
 
-.productAwaitingPayment-accept-div .accept-title{
+.productAwaitingPayment-accept-div .accept-title {
     font-size: 20px;
     font-weight: 800;
 
@@ -989,18 +1013,21 @@ main #productBuy-infos {
     gap: 15px;
     align-items: center;
 }
-.productAwaitingPayment-accept-div .accept-title img{
+
+.productAwaitingPayment-accept-div .accept-title img {
     width: 50px;
     height: 50px;
 }
-.payment-qrCode-area{
+
+.payment-qrCode-area {
     margin-left: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-.productAwaitingPayment-hero-main .change-payment{
+
+.productAwaitingPayment-hero-main .change-payment {
     width: 255px;
     height: 46px;
 
@@ -1012,7 +1039,8 @@ main #productBuy-infos {
 
     border-radius: 20px;
 }
-.section-payment-type{
+
+.section-payment-type {
     margin-top: 30px;
     width: 70%;
     display: flex;
@@ -1020,52 +1048,98 @@ main #productBuy-infos {
     background-color: rgb(255, 255, 255);
     padding: 34px 20px;
 }
-.section-payment-type .buy-info-title{
+
+.section-payment-type .buy-info-title {
     font-size: 20px;
     font-weight: 800;
     margin-bottom: 8px;
     display: block;
 }
-.section-payment-type .buy-info-gray{
+
+.section-payment-type .buy-info-gray {
     color: #ADADAD;
 }
-.section-payment-type .buy-info-bold{
+
+.section-payment-type .buy-info-bold {
     margin-right: 5px;
     font-weight: 600;
 }
 
-.section-payment-type hr{
+.section-payment-type hr {
     margin: 20px 0px;
     border: none;
     border-bottom: 0.5px solid #BDBDBD;
 }
-.paymentTutorial{
+
+.paymentTutorial {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.paymentTutorial-ol{
+.paymentTutorial-ol {
     list-style: none;
 }
-.paymentTutorial-ol li+li{
+
+.paymentTutorial-ol li+li {
     margin-top: 8px;
 }
-.payment-qr-span{
+
+.payment-qr-span {
     width: 75%;
     font-size: 18px;
     font-weight: 800;
 }
-#qrCode{
+
+#qrCode {
     width: 250px;
     height: 250px;
     display: block;
 }
-#codigoDeBarras{
+
+#codigoDeBarras {
     margin-top: 40px;
     width: 300px;
 }
+
 .selected {
     background-color: #00C2FF;
-  }
+}
+
 /*Aguardando pagamento Fim*/
+
+/*Cadastro de produto Inicio*/
+#createProduct-main{
+    margin: 30px 0px;
+    background-color: white;
+}
+#createProduct-main h1{
+    text-align: center;
+}
+.createProduct-hero{
+    padding: 20px 0px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+.createProduct-hero  {
+    width: 100%;
+}
+.createProduct-hero form .campoFormulario label{
+    display: block;
+}
+.createProduct-hero form .campoFormulario input{
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #FAF9FF;
+    
+    border: 1px solid #E6E4F0;
+    box-shadow: ;
+}
+.createProduct-hero form  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/*Cadastro de produto Fim*/
