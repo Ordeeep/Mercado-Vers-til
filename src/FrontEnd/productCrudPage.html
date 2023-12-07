@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <header>
+        <span id="logo">MV</span>
+    </header>
+
+
+    <main id="productCrudPage-main">
+        <h1>Tabela de produtos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome do Produto</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th class="thCenter">Estoque</th>
+                    <th colspan="3" class="thCenter">Imagens</th>
+                    <th colspan="3" class="teste">Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+    </main>
+
+
+    <footer>
+
+        <div id="footerCards">
+            <div class="footerInfos">
+                <span class="footerTitle">Escolha como pagar</span>
+                <img src="assets/img/cardIcon.png" alt="">
+                <span class="footerDescription">No mercado versátil você é quem manda tendo os seguintes tipos de
+                    pagamentos: Boleto, Pix e no crédito ou debito.</span>
+            </div>
+            <hr>
+
+            <div class="footerInfos">
+                <span class="footerTitle">Frete grátis</span>
+                <img src="assets/img/expressBoxIcon.png" alt="">
+                <span class="footerDescription">Aproveite o frete grátis a partir de R$100 em compras e economize
+                    enquanto desfruta de produtos de alta qualidade.</span>
+            </div>
+            <hr>
+            <div class="footerInfos">
+                <span class="footerTitle">Segurança</span>
+                <img src="assets/img/shieldIcon.png" alt="">
+                <span class="footerDescription">A sua segurança é a nossa prioridade, garantindo uma experiência de
+                    compra online protegida e confiável.</span>
+            </div>
+        </div>
+
+        <hr id="footerHr">
+
+        <nav id="footerNav">
+            <ul id="footerUl">
+                <li><a href="#">Trabalhe conosco</a></li>
+                <li><a href="#">Termos e condições</a></li>
+                <li><a href="#">Cuidado com a sua segurança e privacidade</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Informações sobre segurança</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        async function fetchDataAndRenderTable() {
+            try {
+                const response = await axios.get('http://localhost:3000/produtos');
+                const data = response.data;
+                console.log(data);
+
+                // Chame a função para renderizar a tabela
+                renderTable(data);
+            } catch (error) {
+                console.error('Erro na requisição', error);
+            }
+        }
+
+        // Chame a função
+        fetchDataAndRenderTable();
+
+
+        function renderTable(data) {
+            const tbody = document.querySelector('tbody');
+
+            tbody.innerHTML = '';
+
+            data.forEach(item => {
+                console.log(item.productImage3)
+                const row = document.createElement('tr');
+
+                row.innerHTML = `
+        <td><img src="assets/img/copyIcon.png" class="copyId" data-id="${item._id}" alt=""></td>
+        <td>${item.productName}</td>
+        <td>${item.productDescription}</td>
+        <td>${item.productPrice ? `R$${item.productPrice.toFixed(2)}` : ''}</td>
+        <td>${item.productStock || ''}</td>
+        <td class="tdImages"><img id="productImage1" class="productImageTable" src="${item.productImage1}" alt="Imagem 1"></td>
+        <td class="tdImages"><img id="productImage2" class="productImageTable" src="${item.productImage2}" alt="Imagem 2"></td>
+        <td class="tdImages"><img id="productImage3" class="productImageTable" src="${item.productImage3}" alt="Imagem 3"></td>
+        <td class="tdToolsIconCrud">
+            <img class="tdToolsIconCrudImg edit" src="assets/img/editIcon.png" alt="">
+        </td>
+        <td class="tdToolsIconCrud">
+            <img class="tdToolsIconCrudImg delete" src="assets/img/deleteIcon.png" alt="">
+        </td>
+        <td class="tdToolsIconCrud">
+            <img class="tdToolsIconCrudImg view" src="assets/img/viewIcon.png" alt="">
+        </td>
+    `;
+
+                tbody.appendChild(row);
+
+                const copyIdImage = row.querySelector('.copyId');
+                const editImage = row.querySelector('.edit');
+                const deleteImage = row.querySelector('.delete');
+                const viewImage = row.querySelector('.view');
+
+                copyIdImage.addEventListener('click', () => {
+                    const idToCopy = copyIdImage.getAttribute('data-id');
+                    copyToClipboard(idToCopy);
+                });
+
+                editImage.addEventListener('click', () => handleEditAction(item));
+                deleteImage.addEventListener('click', () => handleDeleteAction(item));
+                viewImage.addEventListener('click', () => handleViewAction(item));
+            });
+        }
+
+        function handleEditAction(item) {
+            // Lógica para editar no banco de dados usando item
+            console.log('Editar:');
+        }
+
+        async function handleDeleteAction(item) {
+            try {
+                const response = await axios.delete(`http://localhost:3000/produto/${item._id}`);
+                console.log(response.data);
+                // Aqui você pode fazer algo após a exclusão bem-sucedida
+            } catch (error) {
+                console.error('Erro ao deletar produto', error);
+            }
+            console.log('Editar:', item._id)
+        }
+
+        function handleEditAction(item){
+            const ID = item._id
+            const irParaPagina = `updateProduct.html?productIdUrl=${encodeURIComponent(ID)}`;
+            window.location.href = irParaPagina;
+        }
+
+        function handleViewAction(item) {
+            // Lógica para visualizar no banco de dados usando item
+            console.log('Visualizar:', item);
+        }
+
+        function copyToClipboard(text) {
+            const input = document.createElement('textarea');
+            input.value = text;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+
+        }
+
+    </script>
+</body>
+
+</html>

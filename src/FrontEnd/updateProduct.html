@@ -9,15 +9,16 @@
 </head>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <header>
         <span id="logo">MV</span>
     </header>
 
     <main id="createProduct-main">
-        <h1 class="createProduct-main-h1">Cadastre o seu produto</h1>
+        <h1 class="createProduct-main-h1">Atualize seu produto</h1>
         <div class="createProduct-hero">
             <section>
-                <form action="http://localhost:3000/produto" method="post" id="createProduct-main-form">
+                <form id="createProduct-main-form">
                     <div class="campoFormulario">
                         <label for="productName">Nome do produto</label>
                         <input type="text" name="productName" id="productName">
@@ -112,6 +113,58 @@
             </ul>
         </nav>
     </footer>
+
+
+    <script>
+        function obterParametroConsulta(id) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(id);
+        }
+
+        async function fetchDataAndRenderForm() {
+            const ID = obterParametroConsulta('productIdUrl');
+
+            try {
+                const response = await axios.get(`http://localhost:3000/produtos/${ID}`);
+                const data = response.data;
+
+                document.getElementById('productName').value = data.productName;
+                document.getElementById('productDescription').value = data.productDescription;
+                document.getElementById('productPrice').value = data.productPrice;
+                document.getElementById('productStock').value = data.productStock;
+                document.getElementById('productImage1').value = data.productImage1;
+                document.getElementById('productImage2').value = data.productImage2;
+                document.getElementById('productImage3').value = data.productImage3;
+            } catch (error) {
+                console.error('Erro na requisição', error);
+            }
+        }
+
+        async function enviarAlteracoes() {
+            const ID = obterParametroConsulta('productIdUrl');
+            const form = document.getElementById('createProduct-main-form');
+
+            try {
+                const response = await axios.put(`http://localhost:3000/produtos/${ID}`, {
+                    productName: form.productName.value,
+                    productDescription: form.productDescription.value,
+                    productPrice: form.productPrice.value,
+                    productStock: form.productStock.value,
+                    productImage1: form.productImage1.value,
+                    productImage2: form.productImage2.value,
+                    productImage3: form.productImage3.value,
+                });
+
+                console.log('Alterações enviadas com sucesso:', response.data);
+            } catch (error) {
+                console.error('Erro ao enviar alterações', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchDataAndRenderForm();
+        });
+    </script>
 
 </body>
 

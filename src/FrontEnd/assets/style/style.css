@@ -172,7 +172,7 @@ main #productPrice #productPrice {
 
 @media screen and (max-width: 1507px) {
 
-    main  #productContainer {
+    main #productContainer {
         width: 100%;
         flex-direction: column;
     }
@@ -1109,37 +1109,115 @@ main #productBuy-infos {
 /*Aguardando pagamento Fim*/
 
 /*Cadastro de produto Inicio*/
-#createProduct-main{
+#createProduct-main {
     margin: 30px 0px;
     background-color: white;
 }
-#createProduct-main h1{
+
+#createProduct-main h1 {
     text-align: center;
 }
-.createProduct-hero{
+
+.createProduct-hero {
     padding: 20px 0px;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
 }
-.createProduct-hero  {
+
+.createProduct-hero {
     width: 100%;
 }
-.createProduct-hero form .campoFormulario label{
+
+.createProduct-hero form .campoFormulario {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.createProduct-hero form .campoFormulario label {
     display: block;
 }
-.createProduct-hero form .campoFormulario input{
+
+.createProduct-hero form .campoFormulario input {
     width: 300px;
     height: 40px;
     border-radius: 5px;
     background-color: #FAF9FF;
-    
+
     border: 1px solid #E6E4F0;
-    box-shadow: ;
+    box-shadow: 4px 4px 10px #F0EDFF;
+    padding-left: 10px;
 }
-.createProduct-hero form  {
+
+.createProduct-hero form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 /*Cadastro de produto Fim*/
+
+
+/*Parte do crud*/
+#productCrudPage-main {
+    padding: 50px 15%;
+
+}
+
+#productCrudPage-main h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#productCrudPage-main {
+    background-color: white;
+    margin-top: 20px;
+}
+
+#productCrudPage-main table {
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+#productCrudPage-main table th {
+    background-color: #f2f2f2;
+    font-weight: 500;
+    width: auto;
+}
+
+#productCrudPage-main table th,
+#productCrudPage-main table td {
+    padding: 8px;
+    text-align: left;
+}
+
+#productCrudPage-main table tr .tdImages {
+    width: 64px;
+}
+
+#productCrudPage-main table tr .tdImages img {
+    cursor: pointer;
+    width: 64px;
+    border: 1px solid rgb(116, 116, 116);
+    padding: 5px;
+    border-radius: 8px;
+}
+#productCrudPage-main table thead .teste{
+    padding-left: 20px;
+}
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#productCrudPage-main table .tdToolsIconCrud {
+    width: 60px;
+}
+
+#productCrudPage-main table .tdToolsIconCrud .tdToolsIconCrudImg {
+    width: 50px;
+    padding: 0;
+    cursor: pointer;
+}
