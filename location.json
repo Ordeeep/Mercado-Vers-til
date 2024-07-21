@@ -1,8 +1,55 @@
-[
-   {
-      "key": "RB_AQUIRAZ_ERGOS",
-      "name": "Aquiraz",
-      "latitude": -38.50384071013838,
-      "longitude": -4.046350924194854
-   }
-]
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "key": "RB_AQUIRAZ_ERGOS",
+        "name": "Aquiraz"
+      },
+      "geometry": {
+        "coordinates": [
+          -38.50384071013838,
+          -4.046350924194854
+        ],
+        "type": "Point"
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -38.464332133930355,
+          -4.17209305546551
+        ],
+        "type": "Point"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -39.57986745420931,
+          -3.4998192730112834
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -38.49783615318631,
+          -4.300313722936693
+        ],
+        "type": "Point"
+      },
+      "id": 3
+    }
+  ]
+}
