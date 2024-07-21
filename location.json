@@ -18,7 +18,10 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "key": "RB_PACAJUS_ERGOS",
+        "name": "Pacajus"
+      },
       "geometry": {
         "coordinates": [
           -38.464332133930355,
@@ -30,14 +33,18 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "key": "R1 - ERGOS ITAPIPOCA",
+        "name": "Itapipoca"
+      },
       "geometry": {
         "coordinates": [
           -39.57986745420931,
           -3.4998192730112834
         ],
         "type": "Point"
-      }
+      },
+      "id": 2
     },
     {
       "type": "Feature",
